@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FIFA World Cup 2026: Your DFW Guide | Community Impact</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: #222;
+      background: #fff;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    /* ── Top utility bar ─────────────────────────────── */
+    .top-bar {
+      background: #2a2a2a;
+      color: #ccc;
+      font-size: 12px;
+      padding: 6px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .top-bar a { color: #ccc; margin: 0 10px; }
+    .top-bar a:first-child { margin-left: 0; }
+    .top-bar a:hover { color: #fff; }
+    .top-bar-right { display: flex; align-items: center; gap: 20px; }
+    .top-bar-right a { font-weight: 600; }
+    .top-bar-right .incider-btn {
+      background: #C41230;
+      color: #fff;
+      padding: 4px 12px;
+      border-radius: 3px;
+      font-weight: 700;
+    }
+
+    /* ── Main header ─────────────────────────────────── */
+    .site-header {
+      background: #fff;
+      border-bottom: 1px solid #e5e5e5;
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .logo {
+      font-size: 24px;
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: -0.5px;
+      flex-shrink: 0;
+    }
+    .logo .community { color: #2a2a2a; display: block; font-size: 14px; letter-spacing: 2px; font-weight: 700; }
+    .logo .impact { color: #C41230; display: block; font-size: 28px; letter-spacing: 1px; }
+
+    .location-pill {
+      border: 1.5px solid #C41230;
+      border-radius: 24px;
+      padding: 6px 16px;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      color: #333;
+    }
+    .location-pill svg { color: #C41230; }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      font-size: 13px;
+      color: #555;
+    }
+    .header-actions a { display: flex; align-items: center; gap: 5px; }
+    .header-actions a:hover { color: #C41230; }
+    .beta-badge {
+      background: #e8f0fe;
+      color: #1a56db;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 5px;
+      border-radius: 3px;
+      letter-spacing: 0.5px;
+    }
+
+    /* ── Category nav ────────────────────────────────── */
+    .cat-nav {
+      background: #fff;
+      border-bottom: 2px solid #e5e5e5;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .cat-nav ul {
+      list-style: none;
+      display: flex;
+      padding: 0 24px;
+      gap: 0;
+    }
+    .cat-nav ul li a {
+      display: block;
+      padding: 12px 16px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      color: #444;
+      border-bottom: 3px solid transparent;
+      transition: color 0.15s, border-color 0.15s;
+    }
+    .cat-nav ul li a:hover, .cat-nav ul li a.active {
+      color: #C41230;
+      border-bottom-color: #C41230;
+    }
+    .cat-nav .badge {
+      background: #1a56db;
+      color: #fff;
+      font-size: 9px;
+      padding: 2px 4px;
+      border-radius: 2px;
+      margin-left: 4px;
+      vertical-align: middle;
+    }
+
+    /* ── World Cup hero banner ───────────────────────── */
+    .wc-hero {
+      position: relative;
+      height: 480px;
+      overflow: hidden;
+      background: #111;
+    }
+    .wc-hero img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.55;
+    }
+    .wc-hero-content {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 48px 56px;
+      background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, transparent 60%);
+    }
+    .wc-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+    .wc-badge {
+      background: #C41230;
+      color: #fff;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1.2px;
+      padding: 5px 12px;
+      border-radius: 3px;
+    }
+    .wc-dates {
+      color: rgba(255,255,255,0.85);
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .wc-hero h1 {
+      color: #fff;
+      font-size: 42px;
+      font-weight: 900;
+      line-height: 1.1;
+      max-width: 680px;
+      margin-bottom: 12px;
+    }
+    .wc-hero p {
+      color: rgba(255,255,255,0.88);
+      font-size: 16px;
+      max-width: 560px;
+      line-height: 1.5;
+    }
+
+
+    /* ── Section tabs ────────────────────────────────── */
+    .section-tabs {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .tab-nav {
+      display: flex;
+      gap: 0;
+      border-bottom: 2px solid #e5e5e5;
+      margin-bottom: 32px;
+      flex-wrap: wrap;
+    }
+    .tab-btn {
+      background: none;
+      border: none;
+      padding: 12px 20px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.6px;
+      color: #666;
+      cursor: pointer;
+      border-bottom: 3px solid transparent;
+      margin-bottom: -2px;
+      transition: all 0.15s;
+    }
+    .tab-btn:hover { color: #C41230; }
+    .tab-btn.active {
+      color: #C41230;
+      border-bottom-color: #C41230;
+    }
+
+    /* ── Section heading ─────────────────────────────── */
+    .section-block { margin-bottom: 56px; }
+    .section-block:last-child { margin-bottom: 40px; }
+    .section-heading {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+    .section-heading h2 {
+      font-size: 22px;
+      font-weight: 800;
+      color: #C41230;
+      letter-spacing: -0.3px;
+    }
+    .section-heading .divider {
+      flex: 1;
+      height: 1px;
+      background: #e5e5e5;
+    }
+
+    /* ── Article cards ───────────────────────────────── */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .cards-grid.two-col { grid-template-columns: repeat(2, 1fr); }
+    .cards-grid.four-col { grid-template-columns: repeat(4, 1fr); }
+
+    .card {
+      border: 1px solid #e8e8e8;
+      border-radius: 6px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: box-shadow 0.2s;
+    }
+    .card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.10); }
+
+    .card-img {
+      width: 100%;
+      height: 190px;
+      object-fit: cover;
+      display: block;
+      background: #ddd;
+    }
+
+    .card-body {
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .card-meta {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 10px;
+    }
+    .tag {
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.8px;
+      padding: 3px 8px;
+      border-radius: 3px;
+      color: #fff;
+    }
+    .tag-business   { background: #e07b00; }
+    .tag-dining     { background: #1a7f56; }
+    .tag-transport  { background: #1a56db; }
+    .tag-government { background: #3a3a7f; }
+    .tag-development{ background: #0e7490; }
+    .tag-event      { background: #7c3aed; }
+    .tag-worldcup   { background: #C41230; }
+
+    .card-location {
+      font-size: 11px;
+      color: #777;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+    }
+    .card h3 {
+      font-size: 16px;
+      font-weight: 800;
+      line-height: 1.35;
+      color: #1a1a1a;
+      margin-bottom: 8px;
+    }
+    .card h3 a:hover { color: #C41230; }
+
+    .card-excerpt {
+      font-size: 13.5px;
+      color: #555;
+      line-height: 1.55;
+      flex: 1;
+      margin-bottom: 14px;
+    }
+    .card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: auto;
+    }
+    .card-date { font-size: 12px; color: #999; }
+    .read-more {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #C41230;
+    }
+    .read-more-circle {
+      width: 28px;
+      height: 28px;
+      border: 2px solid #C41230;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .read-more-circle svg { width: 12px; height: 12px; }
+    .card:hover .read-more { color: #a00f25; }
+    .card:hover .read-more-circle { background: #C41230; }
+    .card:hover .read-more-circle svg path { stroke: #fff; }
+
+    /* ── Featured card (wide) ────────────────────────── */
+    .card-featured {
+      grid-column: span 2;
+      flex-direction: row;
+    }
+    .card-featured .card-img {
+      width: 45%;
+      height: auto;
+      min-height: 220px;
+      flex-shrink: 0;
+    }
+    .card-featured .card-body { padding: 24px; }
+    .card-featured h3 { font-size: 20px; }
+
+    /* ── Events placeholder ──────────────────────────── */
+    .events-coming-soon {
+      background: linear-gradient(135deg, #1a1a3e 0%, #3a0e20 100%);
+      border-radius: 8px;
+      padding: 48px 40px;
+      text-align: center;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+    .events-coming-soon::before {
+      content: "⚽";
+      position: absolute;
+      font-size: 140px;
+      opacity: 0.06;
+      right: -20px;
+      top: -20px;
+      line-height: 1;
+    }
+    .events-coming-soon h3 {
+      font-size: 26px;
+      font-weight: 900;
+      margin-bottom: 12px;
+    }
+    .events-coming-soon p {
+      font-size: 15px;
+      color: rgba(255,255,255,0.75);
+      max-width: 520px;
+      margin: 0 auto 24px;
+      line-height: 1.6;
+    }
+    .notify-btn {
+      display: inline-block;
+      background: #C41230;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 10px 24px;
+      border-radius: 4px;
+      letter-spacing: 0.5px;
+    }
+    .notify-btn:hover { background: #a30f28; }
+
+    /* ── Teams spotlight ─────────────────────────────── */
+    .teams-bar {
+      background: #f5f5f5;
+      border-top: 3px solid #C41230;
+      padding: 24px;
+      max-width: 1200px;
+      margin: 0 auto 40px;
+      border-radius: 0 0 6px 6px;
+    }
+    .teams-bar h3 {
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      color: #C41230;
+      margin-bottom: 16px;
+    }
+    .teams-list {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .team-chip {
+      background: #fff;
+      border: 1.5px solid #ddd;
+      border-radius: 24px;
+      padding: 6px 16px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #333;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* ── Key dates bar ───────────────────────────────── */
+    .dates-bar {
+      background: #C41230;
+      color: #fff;
+      padding: 14px 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .date-item { text-align: center; }
+    .date-item .d-label { font-size: 10px; font-weight: 700; letter-spacing: 1px; opacity: 0.8; margin-bottom: 2px; }
+    .date-item .d-val { font-size: 15px; font-weight: 800; }
+    .dates-bar .sep { width: 1px; height: 32px; background: rgba(255,255,255,0.3); }
+
+    /* ── Footer ──────────────────────────────────────── */
+    footer {
+      background: #1e1e1e;
+      color: #bbb;
+      padding: 40px 24px 24px;
+      margin-top: 60px;
+    }
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .footer-logo .community { color: #bbb; font-size: 12px; letter-spacing: 2px; font-weight: 700; }
+    .footer-logo .impact { color: #C41230; font-size: 22px; font-weight: 900; }
+    .footer-note { font-size: 12px; line-height: 1.6; max-width: 400px; color: #888; margin-top: 8px; }
+    .footer-links { display: flex; gap: 40px; flex-wrap: wrap; }
+    .footer-col h4 { color: #ddd; font-size: 12px; font-weight: 700; letter-spacing: 1px; margin-bottom: 12px; }
+    .footer-col a { display: block; color: #888; font-size: 12px; margin-bottom: 8px; }
+    .footer-col a:hover { color: #fff; }
+    .footer-bottom {
+      max-width: 1200px;
+      margin: 32px auto 0;
+      padding-top: 16px;
+      border-top: 1px solid #333;
+      font-size: 11px;
+      color: #666;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    /* ── Responsive ──────────────────────────────────── */
+    @media (max-width: 900px) {
+      .cards-grid { grid-template-columns: repeat(2, 1fr); }
+      .cards-grid.four-col { grid-template-columns: repeat(2, 1fr); }
+      .card-featured { grid-column: span 2; flex-direction: column; }
+      .card-featured .card-img { width: 100%; height: 220px; }
+      .wc-hero h1 { font-size: 28px; }
+      .wc-hero-content { padding: 32px 28px; }
+    }
+    @media (max-width: 600px) {
+      .cards-grid, .cards-grid.two-col, .cards-grid.four-col { grid-template-columns: 1fr; }
+      .card-featured { grid-column: span 1; }
+      .top-bar { display: none; }
+      .header-actions { gap: 12px; }
+      .dates-bar { gap: 20px; }
+      .dates-bar .sep { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Top utility bar -->
+<div class="top-bar">
+  <div>
+    <a href="#">About Us</a>
+    <a href="#">Advertise</a>
+    <a href="#">Careers</a>
+  </div>
+  <div class="top-bar-right">
+    <a href="#">✉ Newsletters</a>
+    <a href="#" class="incider-btn">Become an InCider</a>
+  </div>
+</div>
+
+<!-- Site header -->
+<header class="site-header">
+  <a href="https://communityimpact.com" class="logo">
+    <span class="community">COMMUNITY</span>
+    <span class="impact">IMPACT</span>
+  </a>
+
+  <div class="location-pill">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C41230" stroke-width="2.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+    Dallas-Fort Worth
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+  </div>
+
+  <div class="header-actions">
+    <a href="#">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      Search
+    </a>
+    <a href="#">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+      Map <span class="beta-badge">BETA</span>
+    </a>
+    <a href="#">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      Sign in
+    </a>
+  </div>
+</header>
+
+<!-- Category nav -->
+<nav class="cat-nav">
+  <ul>
+    <li><a href="#">Government</a></li>
+    <li><a href="#">Education</a></li>
+    <li><a href="#">Business</a></li>
+    <li><a href="#">Real Estate</a></li>
+    <li><a href="#">Transportation</a></li>
+    <li><a href="#">Healthcare</a></li>
+    <li><a href="#">Impacts Map <span class="badge">BETA</span></a></li>
+    <li><a href="#">E-Editions</a></li>
+    <li><a href="#">Storytelling</a></li>
+    <li><a href="#" class="active">⚽ World Cup 2026</a></li>
+  </ul>
+</nav>
+
+<!-- World Cup Hero -->
+<div class="wc-hero">
+  <img src="https://communityimpact.com/uploads/images/2026/04/24/421324.jpeg" alt="Toyota Stadium World Cup renovations" />
+  <div class="wc-hero-content">
+    <div class="wc-eyebrow">
+      <span class="wc-badge">⚽ FIFA WORLD CUP 2026</span>
+      <span class="wc-dates">June 11 – July 19, 2026 &nbsp;·&nbsp; AT&amp;T Stadium, Arlington</span>
+    </div>
+    <h1>Your Local Guide to the World Cup in DFW</h1>
+    <p>From dining and transit to stadium updates and team base camps — Community Impact has the hyperlocal coverage you need to experience the biggest sporting event on the planet right here at home.</p>
+  </div>
+</div>
+
+<!-- Key dates bar -->
+<div class="dates-bar">
+  <div class="date-item">
+    <div class="d-label">TOURNAMENT OPENS</div>
+    <div class="d-val">June 11, 2026</div>
+  </div>
+  <div class="sep"></div>
+  <div class="date-item">
+    <div class="d-label">DFW HOST VENUE</div>
+    <div class="d-val">AT&amp;T Stadium · Arlington</div>
+  </div>
+  <div class="sep"></div>
+  <div class="date-item">
+    <div class="d-label">SWEDEN BASE CAMP</div>
+    <div class="d-val">Toyota Stadium · Frisco</div>
+  </div>
+  <div class="sep"></div>
+  <div class="date-item">
+    <div class="d-label">TOURNAMENT CLOSES</div>
+    <div class="d-val">July 19, 2026</div>
+  </div>
+</div>
+
+<!-- DFW teams spotlight -->
+<div class="teams-bar">
+  <h3>TEAMS WITH DFW CONNECTIONS</h3>
+  <div class="teams-list">
+    <div class="team-chip">🇸🇪 Sweden — Base Camp: Toyota Stadium, Frisco</div>
+    <div class="team-chip">🇯🇵 Japan — Playing at AT&amp;T Stadium, Arlington</div>
+    <div class="team-chip">🇺🇸 USA — Playing in DFW group stage</div>
+  </div>
+</div>
+
+<!-- ══ MAIN CONTENT ══ -->
+<div class="section-tabs">
+
+  <!-- ── BUSINESS ─────────────────────────────────────── -->
+  <div class="section-block" id="business">
+    <div class="section-heading">
+      <h2>Business</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="cards-grid">
+
+      <!-- Featured: TOCA Social (soccer-themed — World Cup perfect) -->
+      <div class="card card-featured">
+        <img class="card-img" src="https://communityimpact.com/uploads/images/2026/03/16/414796.jpg" alt="TOCA Social soccer entertainment" />
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="tag tag-worldcup">⚽ WORLD CUP PICK</span>
+            <span class="tag tag-business">BUSINESS</span>
+            <span class="card-location">THE COLONY</span>
+          </div>
+          <h3><a href="https://communityimpact.com/dallas-fort-worth/frisco/business/2026/03/16/toca-social-offers-soccer-themed-eatertainment-center-in-grandscape/" target="_blank">TOCA Social offers soccer-themed 'eatertainment' center in Grandscape</a></h3>
+          <p class="card-excerpt">TOCA Social, a European interactive soccer-themed entertainment destination, recently opened its first American location at Grandscape in The Colony. With simulator bays, food and cocktails, it's the ideal warm-up venue for World Cup fans heading to or from AT&amp;T Stadium.</p>
+          <div class="card-footer">
+            <span class="card-date">Mar. 2026</span>
+            <a class="read-more" href="https://communityimpact.com/dallas-fort-worth/frisco/business/2026/03/16/toca-social-offers-soccer-themed-eatertainment-center-in-grandscape/" target="_blank">
+              Read more
+              <span class="read-more-circle">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="#C41230" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="card-img" src="https://communityimpact.com/uploads/images/2026/01/28/407068.jpg" alt="Stonebriar Centre" />
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="tag tag-business">BUSINESS</span>
+            <span class="card-location">FRISCO</span>
+          </div>
+          <h3><a href="https://communityimpact.com/dallas-fort-worth/frisco/business/2026/01/28/stonebriar-centre-surpasses-25-years-in-frisco/" target="_blank">Stonebriar Centre surpasses 25 years in Frisco</a></h3>
+          <p class="card-excerpt">When Stonebriar Centre opened in August 2000, the 1.7 million-square-foot center was anchored by Nordstrom, Macy's, and JCPenney — all still open today. A destination shopping stop for World Cup visitors staying in the Frisco area.</p>
+          <div class="card-footer">
+            <span class="card-date">Jan. 2026</span>
+            <a class="read-more" href="https://communityimpact.com/dallas-fort-worth/frisco/business/2026/01/28/stonebriar-centre-surpasses-25-years-in-frisco/" target="_blank">
+              Read more
+              <span class="read-more-circle">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="#C41230" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="card-img" src="https://communityimpact.com/uploads/images/2026/02/05/408225.jpg" alt="Kava Culture" />
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="tag tag-business">BUSINESS</span>
+            <span class="card-location">FRISCO</span>
+          </div>
+          <h3><a href="https://communityimpact.com/dallas-fort-worth/frisco/business/2026/02/05/kava-culture-kava-bar-serves-alcohol-free-drinks-schedules-grand-opening-celebration-in-frisco/" target="_blank">Kava Culture Kava Bar serves alcohol-free drinks in Frisco</a></h3>
+          <p class="card-excerpt">Kava Culture Kava Bar opened Jan. 16, offering non-alcoholic kava drinks at its Frisco location. A great option for fans looking for a social spot that doesn't center on alcohol during World Cup gatherings.</p>
+          <div class="card-footer">
+            <span class="card-date">Feb. 2026</span>
+            <a class="read-more" href="https://communityimpact.com/dallas-fort-worth/frisco/business/2026/02/05/kava-culture-kava-bar-serves-alcohol-free-drinks-schedules-grand-opening-celebration-in-frisco/" target="_blank">
+              Read more
+              <span class="read-more-circle">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="#C41230" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="card-img" src="https://communityimpact.com/uploads/images/2026/04/01/417666.jpg" alt="Amazing Lash Studio" />
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="tag tag-business">BUSINESS</span>
+            <span class="card-location">FRISCO</span>
+          </div>
+          <h3><a href="https://communityimpact.com/dallas-fort-worth/frisco/business/2026/04/02/amazing-lash-studio-offers-beauty-services-in-frisco/" target="_blank">Amazing Lash Studio offers beauty services in Frisco</a></h3>
+          <p class="card-excerpt">An Amazing Lash Studio recently opened in Frisco, franchise owner Crystal Assad said. The studio adds to the growing roster of beauty and personal care options available in the Frisco corridor.</p>
+          <div class="card-footer">
+            <span class="card-date">Apr. 2026</span>
+            <a class="read-more" href="https://communityimpact.com/dallas-fort-worth/frisco/business/2026/04/02/amazing-lash-studio-offers-beauty-services-in-frisco/" target="_blank">
+              Read more
+              <span class="read-more-circle">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="#C41230" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div><!-- /business -->
+
+  <!-- ── DINING ─────────────────────────────────────────── -->
+  <div class="section-block" id="dining">
+    <div class="section-heading">
+      <h2>Dining</h2>
+      <div class="divider"></div>
+    </div>
+    <p style="font-size:13px;color:#888;margin-bottom:20px;font-style:italic;">Several nations playing matches in DFW — including Japan — have restaurant connections right here in the Metroplex. Explore local flavors from the countries on the pitch.</p>
+    <div class="cards-grid">
+
+      <div class="card card-featured">
+        <img class="card-img" src="https://communityimpact.com/uploads/images/2026/03/17/415078.jpg" alt="Osaka Hibachi Sushi" />
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="tag tag-worldcup">🇯🇵 JAPAN PLAYS IN DFW</span>
+            <span class="tag tag-dining">DINING</span>
+            <span class="card-location">FRISCO</span>
+          </div>
+          <h3><a href="https://communityimpact.com/dallas-fort-worth/na/dining/2026/03/24/osaka-hibachi-sushi-bar-offers-authentic-japanese-dishes-in-frisco/" target="_blank">Osaka Hibachi Sushi &amp; Bar offers authentic Japanese dishes in Frisco</a></h3>
+          <p class="card-excerpt">Dana Zhang, who co-owns Osaka Hibachi Sushi &amp; Bar with Jie Weng, said first-time customers often find them while doing an internet search for hibachi or sushi — but they soon become repeat customers for a variety of reasons. Japan is scheduled to play at AT&amp;T Stadium, making this a natural stop for supporters.</p>
+          <div class="card-footer">
+            <span class="card-date">Mar. 2026</span>
+            <a class="read-more" href="https://communityimpact.com/dallas-fort-worth/na/dining/2026/03/24/osaka-hibachi-sushi-bar-offers-authentic-japanese-dishes-in-frisco/" target="_blank">
+              Read more
+              <span class="read-more-circle">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="#C41230" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="card-img" src="https://communityimpact.com/uploads/images/2026/04/28/421800.png" alt="Malai Kitchen" />
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="tag tag-dining">DINING</span>
+            <span class="card-location">SOUTHLAKE</span>
+          </div>
+          <h3><a href="https://communityimpact.com/dallas-fort-worth/grapevine-colleyville-southlake/dining/2026/04/28/malai-kitchen-celebrates-10-years-of-bringing-vietnamese-thai-dishes-to-southlake/" target="_blank">Malai Kitchen celebrates 10 years of Vietnamese, Thai dishes in Southlake</a></h3>
+          <p class="card-excerpt">The restaurant serves Thai and Vietnamese dishes including pad Thai fried rice, curry bowls, salads, and soups. A decade-old local institution worth a visit while teams from Southeast Asia compete on the world stage.</p>
+          <div class="card-footer">
+            <span class="card-date">Apr. 2026</span>
+            <a class="read-more" href="https://communityimpact.com/dallas-fort-worth/grapevine-colleyville-southlake/dining/2026/04/28/malai-kitchen-celebrates-10-years-of-bringing-vietnamese-thai-dishes-to-southlake/" target="_blank">
+              Read more
+              <span class="read-more-circle">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="#C41230" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="card-img" src="https://communityimpact.com/uploads/images/2026/03/30/417389.jpeg" alt="New DFW restaurants" />
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="tag tag-dining">DINING ROUNDUP</span>
+            <span class="card-location">DALLAS-FORT WORTH</span>
+          </div>
+          <h3><a href="https://communityimpact.com/dallas-fort-worth/grapevine-colleyville-southlake/dining/2026/03/30/check-out-6-restaurants-newly-opened-in-the-dallas-fort-worth-area/" target="_blank">Check out 6 restaurants newly opened in the Dallas-Fort Worth area</a></h3>
+          <p class="card-excerpt">Looking to explore food opportunities beyond your community? This roundup covers six recently opened restaurants across the Metroplex — a solid starting point for visitors and locals alike looking for something new during World Cup season.</p>
+          <div class="card-footer">
+            <span class="card-date">Mar. 2026</span>
+            <a class="read-more" href="https://communityimpact.com/dallas-fort-worth/grapevine-colleyville-southlake/dining/2026/03/30/check-out-6-restaurants-newly-opened-in-the-dallas-fort-worth-area/" target="_blank">
+              Read more
+              <span class="read-more-circle">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="#C41230" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div><!-- /dining -->
+
+  <!-- ── TRANSPORTATION ─────────────────────────────────── -->
+  <div class="section-block" id="transportation">
+    <div class="section-heading">
+      <h2>Getting Around</h2>
+      <div class="divider"></div>
+    </div>
+    <p style="font-size:13px;color:#888;margin-bottom:20px;font-style:italic;">Hundreds of thousands of visitors are expected in DFW. Here's what's being done — and what's already available — to help you move around the Metroplex.</p>
+    <div class="cards-grid">
+
+      <div class="card card-featured">
+        <img class="card-img" src="https://communityimpact.com/uploads/images/2026/04/02/418205.jpg" alt="FIFA World Cup traffic plans" />
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="tag tag-worldcup">⚽ WORLD CUP TRANSPO</span>
+            <span class="tag tag-transport">TRANSPORTATION</span>
+            <span class="card-location">NORTH TEXAS</span>
+          </div>
+          <h3><a href="https://communityimpact.com/dallas-fort-worth/grapevine-colleyville-southlake/transportation/2026/04/02/north-central-texas-council-of-governments-unveils-traffic-plans-for-fifa-world-cup/" target="_blank">North Central Texas Council of Governments unveils traffic plans for FIFA World Cup</a></h3>
+          <p class="card-excerpt">Transportation officials discuss plans for public transportation, roadway closures, and more ahead of the games. The NCTCOG regional plan addresses how hundreds of thousands of visitors will move through the Metroplex during match days.</p>
+          <div class="card-footer">
+            <span class="card-date">Apr. 2026</span>
+            <a class="read-more" href="https://communityimpact.com/dallas-fort-worth/grapevine-colleyville-southlake/transportation/2026/04/02/north-central-texas-council-of-governments-unveils-traffic-plans-for-fifa-world-cup/" target="_blank">
+              Read more
+              <span class="read-more-circle">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="#C41230" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="card-img" src="https://communityimpact.com/uploads/images/2026/04/10/419256.jpg" alt="DFW Airport upgrades" />
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="tag tag-transport">TRANSPORTATION</span>
+            <span class="card-location">GRAPEVINE</span>
+          </div>
+          <h3><a href="https://communityimpact.com/dallas-fort-worth/grapevine-colleyville-southlake/transportation/2026/04/10/upgrades-coming-to-terminals-d-f-at-dallas-fort-worth-international-airport/" target="_blank">Upgrades coming to Terminals D, F at Dallas Fort Worth International Airport</a></h3>
+          <p class="card-excerpt">Contracts for public artwork have been awarded for Terminals C and F as DFW Airport prepares for the World Cup surge. The upgrades are among several improvements planned for the airport ahead of the influx of international arrivals.</p>
+          <div class="card-footer">
+            <span class="card-date">Apr. 2026</span>
+            <a class="read-more" href="https://communityimpact.com/dallas-fort-worth/grapevine-colleyville-southlake/transportation/2026/04/10/upgrades-coming-to-terminals-d-f-at-dallas-fort-worth-international-airport/" target="_blank">
+              Read more
+              <span class="read-more-circle">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="#C41230" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="card-img" src="https://communityimpact.com/uploads/images/2026/04/23/421180.jpeg" alt="Frisco circulator transit" />
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="tag tag-transport">MICROTRANSIT</span>
+            <span class="card-location">FRISCO</span>
+          </div>
+          <h3><a href="https://communityimpact.com/dallas-fort-worth/frisco/government/2026/04/23/public-transit-circulator-service-coming-to-downtown-frisco/" target="_blank">Public transit circulator service coming to downtown Frisco</a></h3>
+          <p class="card-excerpt">Riders can use the service for free, with vehicles running every 10 minutes. The new downtown circulator will help visitors and residents navigate Frisco — home to Sweden's World Cup base camp at Toyota Stadium.</p>
+          <div class="card-footer">
+            <span class="card-date">Apr. 2026</span>
+            <a class="read-more" href="https://communityimpact.com/dallas-fort-worth/frisco/government/2026/04/23/public-transit-circulator-service-coming-to-downtown-frisco/" target="_blank">
+              Read more
+              <span class="read-more-circle">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="#C41230" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="card-img" src="https://communityimpact.com/uploads/images/2026/04/13/419523.jpg" alt="DCTA microtransit Frisco" />
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="tag tag-transport">TRANSIT</span>
+            <span class="card-location">FRISCO</span>
+          </div>
+          <h3><a href="https://communityimpact.com/dallas-fort-worth/frisco/government/2026/04/13/frisco-officials-approve-15m-local-dcta-microtransit-service/" target="_blank">Frisco officials approve $15M local DCTA microtransit service</a></h3>
+          <p class="card-excerpt">A new public transportation option is set to roll out soon in Frisco through a partnership with the Denton County Transportation Authority. The $15M investment expands mobility options just as World Cup traffic is expected to peak.</p>
+          <div class="card-footer">
+            <span class="card-date">Apr. 2026</span>
+            <a class="read-more" href="https://communityimpact.com/dallas-fort-worth/frisco/government/2026/04/13/frisco-officials-approve-15m-local-dcta-microtransit-service/" target="_blank">
+              Read more
+              <span class="read-more-circle">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="#C41230" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div><!-- /transportation -->
+
+  <!-- ── GOVERNMENT & IMPACT ─────────────────────────────── -->
+  <div class="section-block" id="government">
+    <div class="section-heading">
+      <h2>Government &amp; Community Impact</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="cards-grid">
+
+      <div class="card card-featured">
+        <img class="card-img" src="https://communityimpact.com/uploads/images/2026/04/01/417898.jpg" alt="Sweden base camp Frisco" />
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="tag tag-worldcup">🇸🇪 SWEDEN BASE CAMP</span>
+            <span class="tag tag-government">GOVERNMENT</span>
+            <span class="card-location">FRISCO</span>
+          </div>
+          <h3><a href="https://communityimpact.com/dallas-fort-worth/frisco/government/2026/04/01/frisco-to-host-sweden-national-team-for-2026-fifa-world-cup/" target="_blank">Frisco to host Sweden National Team for 2026 FIFA World Cup</a></h3>
+          <p class="card-excerpt">Frisco will serve as the home base for the Sweden National Team during the 2026 FIFA World Cup. Toyota Stadium — currently undergoing a $182 million renovation — will serve as their training and preparation headquarters throughout the tournament.</p>
+          <div class="card-footer">
+            <span class="card-date">Apr. 2026</span>
+            <a class="read-more" href="https://communityimpact.com/dallas-fort-worth/frisco/government/2026/04/01/frisco-to-host-sweden-national-team-for-2026-fifa-world-cup/" target="_blank">
+              Read more
+              <span class="read-more-circle">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="#C41230" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="card-img" src="https://communityimpact.com/uploads/images/2026/04/24/421324.jpeg" alt="Toyota Stadium renovations" />
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="tag tag-government">GOVERNMENT</span>
+            <span class="card-location">FRISCO</span>
+          </div>
+          <h3><a href="https://communityimpact.com/dallas-fort-worth/frisco/government/2026/04/24/toyota-stadium-set-for-926m-in-additional-renovations/" target="_blank">Toyota Stadium set for $9.26M in additional renovations</a></h3>
+          <p class="card-excerpt">Toyota Stadium is currently undergoing $182 million worth of renovations, including more than 3,400 new seats, new sports lighting, and luxury suites. An additional $9.26M package layers further upgrades onto the facility ahead of the tournament.</p>
+          <div class="card-footer">
+            <span class="card-date">Apr. 2026</span>
+            <a class="read-more" href="https://communityimpact.com/dallas-fort-worth/frisco/government/2026/04/24/toyota-stadium-set-for-926m-in-additional-renovations/" target="_blank">
+              Read more
+              <span class="read-more-circle">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="#C41230" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="card-img" src="https://communityimpact.com/uploads/images/2026/04/29/421896.jpg" alt="Toyota Stadium Women's World Cup bid" />
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="tag tag-development">DEVELOPMENT</span>
+            <span class="card-location">FRISCO</span>
+          </div>
+          <h3><a href="https://communityimpact.com/dallas-fort-worth/frisco/development/2026/04/29/toyota-stadium-renovation-aims-to-secure-2031-womens-world-cup-bid/" target="_blank">Toyota Stadium renovation aims to secure 2031 Women's World Cup bid</a></h3>
+          <p class="card-excerpt">Toyota Stadium is under construction with $182 million in renovations — and the vision extends beyond 2026. City officials are positioning the facility as a candidate host for the 2031 FIFA Women's World Cup.</p>
+          <div class="card-footer">
+            <span class="card-date">Apr. 2026</span>
+            <a class="read-more" href="https://communityimpact.com/dallas-fort-worth/frisco/development/2026/04/29/toyota-stadium-renovation-aims-to-secure-2031-womens-world-cup-bid/" target="_blank">
+              Read more
+              <span class="read-more-circle">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="#C41230" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="card-img" src="https://communityimpact.com/uploads/images/2026/03/25/416603.JPG" alt="FIFA safety grants" />
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="tag tag-government">GOVERNMENT</span>
+            <span class="card-location">NORTH TEXAS</span>
+          </div>
+          <h3><a href="https://communityimpact.com/dallas-fort-worth/frisco/government/2026/03/25/north-texas-houston-earn-116m-in-grants-for-fifa-world-cup-safety-measures/" target="_blank">North Texas, Houston earn $116M in grants for FIFA World Cup safety measures</a></h3>
+          <p class="card-excerpt">The 2026 FIFA World Cup will run from June 11 to July 19, with multiple matches at AT&amp;T Stadium in Arlington and NRG Stadium in Houston. The $116M in federal grants will fund coordinated public safety operations across both host regions.</p>
+          <div class="card-footer">
+            <span class="card-date">Mar. 2026</span>
+            <a class="read-more" href="https://communityimpact.com/dallas-fort-worth/frisco/government/2026/03/25/north-texas-houston-earn-116m-in-grants-for-fifa-world-cup-safety-measures/" target="_blank">
+              Read more
+              <span class="read-more-circle">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="#C41230" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div><!-- /government -->
+
+  <!-- ── EVENTS ──────────────────────────────────────────── -->
+  <div class="section-block" id="events">
+    <div class="section-heading">
+      <h2>Local Events</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="events-coming-soon">
+      <h3>Event Coverage Coming Soon</h3>
+      <p>Our reporters are working on local event roundups — fan zones, watch parties, community gatherings, and business specials happening across DFW during the World Cup. Check back as we add coverage throughout the summer.</p>
+      <a href="https://communityimpact.com/newsletters" class="notify-btn" target="_blank">Sign Up for Newsletters</a>
+    </div>
+  </div><!-- /events -->
+
+</div><!-- /section-tabs -->
+
+<!-- Footer -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">
+        <div class="community">COMMUNITY</div>
+        <div class="impact">IMPACT</div>
+      </div>
+      <p class="footer-note">Community Impact Newspaper covers the hyperlocal stories that matter to DFW residents — government, business, education, transportation, and more.</p>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>EXPLORE DFW</h4>
+        <a href="#">Frisco</a>
+        <a href="#">The Colony</a>
+        <a href="#">Grapevine / Southlake</a>
+        <a href="#">Arlington</a>
+        <a href="#">All Communities</a>
+      </div>
+      <div class="footer-col">
+        <h4>SECTIONS</h4>
+        <a href="#">Business</a>
+        <a href="#">Dining</a>
+        <a href="#">Transportation</a>
+        <a href="#">Government</a>
+        <a href="#">⚽ World Cup Guide</a>
+      </div>
+      <div class="footer-col">
+        <h4>COMPANY</h4>
+        <a href="#">About Us</a>
+        <a href="#">Advertise</a>
+        <a href="#">Newsletters</a>
+        <a href="#">Careers</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Community Impact Newspaper. All rights reserved.</span>
+    <span>This special section is updated regularly during the World Cup (June 11 – July 19, 2026).</span>
+  </div>
+</footer>
+
+</body>
+</html>
